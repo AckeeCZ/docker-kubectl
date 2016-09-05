@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM debian:wheezy
 
 # Install kubectl
 # Note: Latest version may be found on:
