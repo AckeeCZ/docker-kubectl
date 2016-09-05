@@ -3,6 +3,8 @@
 set -eo pipefail
 
 #wait for network to initialise
-sleep 15
+echo "sleeping"
+sleep 60
+echo "resume"
 
 exec "$@"
