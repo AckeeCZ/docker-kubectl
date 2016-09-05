@@ -5,6 +5,9 @@ FROM alpine:3.4
 # https://aur.archlinux.org/packages/kubectl-bin/
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.3.6/bin/linux/amd64/kubectl /usr/local/bin/kubectl
 
+# entrypoint
+COPY entrypoint.sh /entrypoint.sh
+
 RUN set -x && \
     apk add --no-cache curl ca-certificates && \
     chmod +x /usr/local/bin/kubectl && \
