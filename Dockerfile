@@ -6,7 +6,7 @@ FROM alpine:3.4
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.3.6/bin/linux/amd64/kubectl /usr/local/bin/kubectl
 
 # entrypoint
-COPY entrypoint.sh /entrypoint.sh
+#COPY entrypoint.sh /entrypoint.sh
 
 RUN set -x && \
     apk add --no-cache curl ca-certificates && \
@@ -17,6 +17,6 @@ RUN set -x && \
 ENV HOME=/config
 USER kubectl
 
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["kubectl"]
