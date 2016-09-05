@@ -6,7 +6,6 @@ FROM debian:wheezy
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.3.6/bin/linux/amd64/kubectl /usr/local/bin/kubectl
 
 RUN set -x && \
-    apk add --no-cache curl ca-certificates && \
     chmod +x /usr/local/bin/kubectl && \
     # Create non-root user (with a randomly chosen UID/GUI).
     adduser kubectl -Du 2342 -h /config
